@@ -24,8 +24,10 @@ Read `illustration-schema.json`. It has two parts:
 
 ## Step 2 — Ask before generating (mandatory)
 
-Do not generate any image yet. Check the schema for gaps or ambiguity and ask the user
-about them in a single batch of questions, for example:
+Do not call the image-generation tool yet, and do not generate an image of a summary,
+form, or confirmation card — Steps 2 and 3 are plain conversational text only, nothing
+visual. Check the schema for gaps or ambiguity and ask the user about them in a single
+batch of questions, for example:
 
 - Any `global_variables` field that is empty, a placeholder, or lists multiple
   comma-separated options instead of one choice (e.g. `param1_color` listing three
@@ -44,8 +46,10 @@ translating into a valid option (e.g. user says "warm and cozy" → map to a mat
 
 ## Step 3 — Confirm the final parameters
 
-Summarize the resolved values (all six params + object list) back to the user in one
-short block and get explicit go-ahead before generating.
+Summarize the resolved values (all six params + object list) back to the user as plain
+text (a short bulleted list is fine, but it must be text the model writes in the chat,
+not an image, card, or rendered graphic) and get explicit go-ahead before generating.
+The image-generation tool is only ever called in Step 5.
 
 ## Step 4 — Assemble one prompt per frame object
 
