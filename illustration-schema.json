@@ -1,0 +1,15 @@
+{
+  "global_variables": {
+    "param1_color": "D5AEF2, F2AECC, F2D5AE",
+    "param2_visual_style": "3D render, high detail, rounded, translucent (opacity 0.45)",
+    "param4_lighting_mood": "studio lighting, diffusion lighting, reflective lighting",
+    "param5_background_composition": "soft shadow, transparent background (png)",
+    "param6_negative_prompt": "blurry, low quality, compression artifacts, bad lighting"
+  },
+  "frame_objects": {
+    "frame_object1": "Birthday gift, front view, tilted to the right",
+    "frame_object2": "Birthday cake, front view, tilted to the right",
+    "frame_object3": "Teddy bear, front view, tilted to the right",
+    "frame_object4": "Rose flower, front view, tilted to the right"
+  }
+}
