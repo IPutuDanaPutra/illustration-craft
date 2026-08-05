@@ -3,8 +3,8 @@
 Not part of the schema itself — reference only, for filling in `illustration-schema.json`.
 
 ## param1_color
-- Hex color (e.g. `#D5AFF2`)
-- Or a color name
+Hex color only (e.g. `#D5AFF2`) — do not use color names, always resolve to a hex
+code, including in recommendations.
 
 ## param2_visual_style
 3D render, vector illustration, watercolor painting, pencil sketch, cartoon style, pixel art, paper cut, low poly, high poly detail, flat design, abstract expressionism, surrealism, pop art, minimalist, futuristic, retro 80s, cyberpunk, steampunk, isometric, line art

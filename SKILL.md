@@ -48,9 +48,10 @@ the object(s) being illustrated, and say briefly why. The schema's stored value 
 fallback if the user has no preference and no recommendation fits better, not the thing
 to lead with.
 
-1. **Color** — recommend a palette suited to the subject (e.g. warm reds/browns for a
-   food subject, pastels for a birthday theme) and ask if that works or if they'd
-   prefer something else.
+1. **Color** — recommend a palette as hex codes suited to the subject (e.g. warm
+   reds/browns for a food subject, pastels for a birthday theme) per
+   `param-reference.md` — never a color name, always a hex code — and ask if that
+   works or if they'd prefer something else.
 2. **Visual style** — recommend a style from `param-reference.md` (3D render, flat
    design, watercolor, line art, etc.) suited to the subject, and ask if that works or
    if they want something different.
