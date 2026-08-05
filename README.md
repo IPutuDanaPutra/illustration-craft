@@ -1,6 +1,6 @@
 # Illustration Craft
 
-**A guided illustration-generation skill for ChatGPT and Gemini.**
+**A guided illustration-generation skill for ChatGPT.**
 
 Illustration Craft turns a scattered back-and-forth of "make it more like this, change
 the lighting, no not that color" into a single guided flow: the model recommends a
@@ -8,10 +8,10 @@ style, confirms what you want, then produces a coherent *set* of illustrations t
 share one visual identity — same palette, same lighting, same mood — instead of a pile
 of unrelated images.
 
-> **Supported platforms:** ChatGPT and Gemini, for now — specifically, whichever of
-> them can connect to a GitHub repository directly (see setup below). Other assistants
-> may work if they support the same kind of repository connection, but that hasn't been
-> tested.
+> **Supported platforms:** ChatGPT only, for now, via its GitHub connector. Gemini
+> can't connect to a plain GitHub repository without a Google Workspace account with
+> the GitHub Marketplace app installed, which most personal accounts don't have — so
+> it isn't supported until that's available another way.
 
 ## Why this exists
 
@@ -23,29 +23,21 @@ the conversation — not re-guessed for every image.
 
 ## Setup (do this once)
 
-The skill lives in this GitHub repository. For it to work reliably, your assistant
-needs to read the repository directly — pasting a plain link doesn't work consistently
-(some assistants can't fetch external links at all, and even when they can, they may
-only skim the page instead of following it).
+The skill lives in this GitHub repository. For it to work reliably, ChatGPT needs to
+read the repository directly — pasting a plain link doesn't work consistently (it
+can't always fetch external links, and even when it can, it may only skim the page
+instead of following it).
 
-**In ChatGPT:**
 1. Go to **Settings → Connectors → GitHub** and connect your GitHub account.
 2. In a new chat, reference this repository (e.g. `@IPutuDanaPutra/illustration-craft`
    or however ChatGPT's connector UI lets you attach it) and say what you want — see
    [How to use](#how-to-use) below.
 
-**In Gemini:**
-1. Check whether your Gemini app/plan offers a similar GitHub connection (under
-   Extensions or Apps in settings) and connect this repository the same way.
-2. If no such connector is available yet, you can still try referencing the
-   repository directly, but results may be less consistent until Gemini supports a
-   proper connection the way ChatGPT does.
-
 ## How to use
 
 Before starting, make sure you've completed the [Setup](#setup-do-this-once) step
-above — GitHub connected in ChatGPT or Gemini. If it's not connected yet, do that first;
-the steps below assume it's already done.
+above — GitHub connected in ChatGPT. If it's not connected yet, do that first; the
+steps below assume it's already done.
 
 1. **Reference the repository.** In a new chat, say something like:
 

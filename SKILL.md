@@ -1,7 +1,7 @@
 # Illustration Craft
 
-A portable skill for any model with image-generation capability (ChatGPT, Gemini, etc.).
-It generates a consistent set of illustrations from a shared style schema — asking the
+A skill for ChatGPT (via its GitHub connector) with image-generation capability. It
+generates a consistent set of illustrations from a shared style schema — asking the
 user for missing details before generating anything.
 
 Files in this repo:
@@ -11,9 +11,9 @@ Files in this repo:
 
 ## How to use this skill
 
-Connect this repository to the model (e.g. ChatGPT's GitHub connector, or an
-equivalent), then say: *"Use the Illustration Craft skill to create illustrations of
-[whatever you want]."* The model should then follow the steps below.
+Connect this repository via ChatGPT's GitHub connector (Settings → Connectors →
+GitHub), then say: *"Use this repository to create illustrations of [whatever you
+want]."* The model should then follow the steps below.
 
 ## Step 1 — Load the schema (silently)
 
