@@ -38,13 +38,14 @@ naturally about what you want.
 
 ## Getting started
 
-1. **Point your model at the skill file.** Some assistants (including ChatGPT) can't
-   reliably read a regular `github.com` page, since it's JavaScript-rendered — use the
-   raw link instead:
-
-   > "Read the instructions at
-   > https://raw.githubusercontent.com/IPutuDanaPutra/illustration-craft/main/SKILL.md
-   > and follow them to create illustrations for me."
+1. **Start a new chat and paste [`PASTE-THIS.md`](./PASTE-THIS.md) as your first
+   message.** This is the recommended way to use the skill — it bundles the
+   instructions and schema into one message, so the model doesn't need to fetch
+   anything from a link. Chat assistants don't reliably treat a fetched URL as binding
+   instructions (some can't fetch external links at all, and even when they can, they
+   may only skim it instead of following it step by step), so pasting the full skill
+   directly is the version that works consistently across ChatGPT, Gemini, and
+   different plans/models.
 
 2. **Answer the setup questions.** The model will ask about things like color
    preference, visual style (3D render, watercolor, flat design, etc.), lighting mood,
