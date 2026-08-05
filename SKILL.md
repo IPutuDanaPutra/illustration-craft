@@ -62,6 +62,14 @@ and make clear the user can just say "use the defaults" to accept 1–4 as-is. I
 everything was already answered earlier in the conversation, skip straight to Step 3 —
 don't ask questions just to ask them.
 
+**If the user asks to see the options for a specific dimension** (e.g. "give me the
+options for visual style," "what colors can I pick from"), list the real choices from
+`param-reference.md` for that dimension in plain language, and recommend one — don't
+just dump the list and leave them to guess. Base the recommendation on what suits the
+object(s) being illustrated (e.g. for a food subject, favor a warm/appetizing palette
+and a style that reads well at small sizes over something like line art); say briefly
+why in one clause.
+
 Use `param-reference.md` as the allowed-value list when a user's answer needs
 translating into a valid option (e.g. user says "warm and cozy" → map to a matching
 lighting/mood value), but translate it back into plain language when talking to the
