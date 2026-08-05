@@ -16,7 +16,16 @@ The model should then follow the steps below.
 
 ## Step 1 — Load the schema
 
-Read `illustration-schema.json`. It has two parts:
+You must actively fetch this exact URL before doing anything else — do not rely on it
+being attached, cached, or inferred from this file's location:
+
+```
+https://raw.githubusercontent.com/IPutuDanaPutra/illustration-craft/main/illustration-schema.json
+```
+
+If you cannot fetch URLs, tell the user directly ("I can't fetch external files, please
+paste the contents of illustration-schema.json") — do not proceed to generate anything
+without it. This file has two parts:
 
 - `global_variables` — style rules shared by every illustration (color palette, visual
   style, lighting, background/composition, negative prompt).
