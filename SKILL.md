@@ -38,18 +38,29 @@ This file has two parts:
 Do not call the image-generation tool yet, and do not generate an image of a summary,
 form, or confirmation card — Steps 2 and 3 are plain conversational text only, nothing
 visual. Ask like a friendly designer, not a system reporting its internal state — plain
-language, no field names, no raw schema dumps. Check for gaps or ambiguity and ask about
-them in a single batch of natural questions, for example:
+language, no field names, no raw schema dumps. Ask one question per style dimension,
+plus one about the object(s), so nothing gets silently defaulted without a chance to
+change it:
 
-- If the style has multiple options instead of one clear choice (e.g. several colors
-  listed) — ask the user to pick, or confirm "use them all together."
-- Anything vague about the requested object(s): count, pose, angle, composition.
-- Whether the illustrations must look consistent as a *set* (same style/lighting across
-  all of them) or can vary per object.
-- Output format/size if the target tool requires it (e.g. aspect ratio, transparent PNG).
+1. **Color** — state the default palette in plain terms (e.g. "soft lavender, pink,
+   and warm yellow") and ask if that works or if they'd prefer something else.
+2. **Visual style** — state the default (e.g. "3D render, rounded, slightly
+   translucent") and ask if that works or if they want a different style (flat design,
+   watercolor, line art, etc. — see `param-reference.md` for options).
+3. **Lighting/mood** — state the default and ask if that works or if they want a
+   different mood (dramatic, warm, moody, bright, etc.).
+4. **Background/composition** — state the default (e.g. transparent background, soft
+   shadow) and ask if that works or if they want something else (solid color, scene
+   background, specific composition).
+5. **The object(s) to illustrate** — this is the one thing that's never defaulted
+   silently: confirm how many illustrations, and get a clear description of each one
+   (subject, pose/angle, any distinguishing details). If the user already described
+   this clearly, just restate it back for confirmation instead of re-asking.
 
-If everything is already clear and unambiguous, skip straight to Step 3 — don't ask
-questions just to ask them.
+Ask all of this as one combined, easy-to-skim message — not five separate messages —
+and make clear the user can just say "use the defaults" to accept 1–4 as-is. If
+everything was already answered earlier in the conversation, skip straight to Step 3 —
+don't ask questions just to ask them.
 
 Use `param-reference.md` as the allowed-value list when a user's answer needs
 translating into a valid option (e.g. user says "warm and cozy" → map to a matching
