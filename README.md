@@ -1,16 +1,17 @@
 # Illustration Craft
 
-**A portable illustration-generation skill for any AI model with image-generation
-capability.**
+**A guided illustration-generation skill for ChatGPT and Gemini.**
 
 Illustration Craft turns a scattered back-and-forth of "make it more like this, change
-the lighting, no not that color" into a single guided flow: the model asks the right
-questions upfront, confirms what it heard, then produces a coherent *set* of
-illustrations that all share one visual identity — same palette, same lighting, same
-mood — instead of a pile of unrelated images.
+the lighting, no not that color" into a single guided flow: the model recommends a
+style, confirms what you want, then produces a coherent *set* of illustrations that all
+share one visual identity — same palette, same lighting, same mood — instead of a pile
+of unrelated images.
 
-It isn't tied to any one platform. Point ChatGPT, Gemini, or any other model with image
-generation at this repository, and it follows the same instructions.
+> **Supported platforms:** ChatGPT and Gemini, for now — specifically, whichever of
+> them can connect to a GitHub repository directly (see setup below). Other assistants
+> may work if they support the same kind of repository connection, but that hasn't been
+> tested.
 
 ## Why this exists
 
@@ -20,72 +21,79 @@ color palette that wanders. Illustration Craft fixes that by generating every
 illustration in a set from one shared style definition, resolved once at the start of
 the conversation — not re-guessed for every image.
 
-## How it works
+## Setup (do this once)
 
-1. **Load** — the model reads the skill's style configuration.
-2. **Ask** — before generating anything, it checks for gaps or ambiguity and asks you
-   about them in one batch, not one question at a time.
-3. **Confirm** — it summarizes what it understood and waits for your go-ahead.
-4. **Generate** — it builds one illustration per requested object, keeping the shared
-   style identical across all of them.
-5. **Refine** — afterward, you can tweak a single illustration or a single style
-   choice and regenerate just that piece, without redoing the whole set.
+The skill lives in this GitHub repository. For it to work reliably, your assistant
+needs to read the repository directly — pasting a plain link doesn't work consistently
+(some assistants can't fetch external links at all, and even when they can, they may
+only skim the page instead of following it).
 
-The style configuration itself (color logic, rendering parameters, and how they're
-assembled into prompts) is Illustration Craft's internal engine and isn't documented
-here — you don't need to understand it to use the skill, only to talk to the model
-naturally about what you want.
+**In ChatGPT:**
+1. Go to **Settings → Connectors → GitHub** and connect your GitHub account.
+2. In a new chat, reference this repository (e.g. `@IPutuDanaPutra/illustration-craft`
+   or however ChatGPT's connector UI lets you attach it) and say what you want — see
+   [How to use](#how-to-use) below.
 
-## Getting started
+**In Gemini:**
+1. Check whether your Gemini app/plan offers a similar GitHub connection (under
+   Extensions or Apps in settings) and connect this repository the same way.
+2. If no such connector is available yet, you can still try referencing the
+   repository directly, but results may be less consistent until Gemini supports a
+   proper connection the way ChatGPT does.
 
-1. **Connect this repository to your assistant, then ask for it by name.** In
-   ChatGPT, this means adding it via Settings → Connectors → GitHub; other assistants
-   may offer something similar. Once connected, just say:
+## How to use
+
+1. **Ask for it by name.** Once connected, say something like:
 
    > "Use the Illustration Craft skill to create illustrations of [whatever you want]."
 
-   A plain link or copy-pasted URL isn't reliable — some assistants can't fetch
-   external links at all, and even when they can, they may only skim the page instead
-   of actually following it. A real connector reads the repository directly, which is
-   what makes the flow below consistent.
+2. **Answer the style questions.** The model will recommend a color palette, visual
+   style, lighting/mood, and background/composition suited to what you're illustrating
+   — each with a short reason — and ask if each one works or if you'd rather change it.
+   No preference? Just reply "use your recommendations."
 
-2. **Answer the setup questions.** The model will ask about things like color
-   preference, visual style (3D render, watercolor, flat design, etc.), lighting mood,
-   and background/composition — only for whatever isn't already decided. If you don't
-   have a preference, say so and it will choose something sensible.
+3. **Confirm the object(s).** Say what you want illustrated — subject, pose/angle, how
+   many. If you already said this up front, the model will just restate it back for you
+   to confirm instead of asking again.
 
-3. **Describe what you want illustrated.** For example: "a birthday gift, a birthday
-   cake, a teddy bear, and a rose, all front-facing and tilted slightly right." The
-   model will resolve this into a matching set of illustrations.
-
-4. **Review the confirmation.** Before generating, the model recaps the resolved style
-   and object list. Check it, adjust anything that's off, then approve.
+4. **Review the summary.** Before generating, the model recaps the resolved style and
+   object list in plain language. Check it, adjust anything that's off, then approve.
 
 5. **Get your illustration set.** All illustrations generate together, sharing one
    consistent look.
 
-6. **Refine as needed.** Want the teddy bear's lighting warmer, but everything else is
-   perfect? Ask for just that change — no need to regenerate the whole set.
+6. **Refine as needed.** Want one illustration's lighting warmer, but everything else
+   is perfect? Ask for just that change — no need to regenerate the whole set.
 
 ## Example conversation
 
-> **You:** Use the Illustration Craft skill to create illustrations of a birthday
-> gift, a birthday cake, a teddy bear, and a rose.
+> **You:** Use the Illustration Craft skill to create a Bakso illustration.
 >
-> **Model:** Before I generate, a few quick questions — any color palette preference,
-> or should I choose one? Do you want a specific art style (3D render, watercolor,
-> flat design, etc.), and should the background be transparent or something else?
+> **Model:** Before generating, here's what I'd suggest:
+> - **Color:** warm reds and browns (`#8B4513`, `#C1440E`) to feel appetizing
+> - **Visual style:** detailed 3D render — reads clearly at any size
+> - **Lighting:** warm, appetizing studio light
+> - **Background:** transparent, so it drops into any layout
 >
-> **You:** Soft pastel colors, 3D render style, transparent background.
+> Do these work, or want something different? Also — one Bakso illustration, or a set
+> (e.g. bowl view, close-up, street-cart scene)?
 >
-> **Model:** Got it — pastel palette, 3D render, transparent background, applied
-> consistently across all four illustrations. Generating now.
+> **You:** Use your recommendations, just one bowl view.
+>
+> **Model:** Got it — generating now.
 
-## Tips for best results
+## Pro tips
 
+- **Ask to see the options.** "Give me the options for visual style" (or color,
+  lighting, background) gets you the real list of choices, with a recommendation
+  called out — not just a random pick with no explanation.
+- **Ask for an example prompt.** "Show me an example prompt" gets you the actual
+  assembled prompt text the model would use to generate — useful if you want to see
+  exactly what's about to happen, or reuse the prompt elsewhere. This doesn't skip the
+  confirmation step; it still asks before generating.
 - **Be specific about mood, not mechanics.** "Warm and cozy" or "playful and bright"
-  works better than trying to specify exact technical parameters yourself — the model
-  translates intent into the right settings.
+  works better than trying to specify exact technical settings yourself — the model
+  translates intent into the right choices.
 - **Ask for a set, not singles.** Illustration Craft is built for generating multiple
   illustrations that belong together; you'll get the most value requesting several at
   once rather than one-off images.
