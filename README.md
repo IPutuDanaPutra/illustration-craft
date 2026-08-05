@@ -43,9 +43,14 @@ only skim the page instead of following it).
 
 ## How to use
 
-1. **Ask for it by name.** Once connected, say something like:
+Before starting, make sure you've completed the [Setup](#setup-do-this-once) step
+above — GitHub connected in ChatGPT or Gemini. If it's not connected yet, do that first;
+the steps below assume it's already done.
 
-   > "Use the Illustration Craft skill to create illustrations of [whatever you want]."
+1. **Reference the repository.** In a new chat, say something like:
+
+   > "Use https://github.com/IPutuDanaPutra/illustration-craft to create illustrations
+   > of [whatever you want]."
 
 2. **Answer the style questions.** The model will recommend a color palette, visual
    style, lighting/mood, and background/composition suited to what you're illustrating
