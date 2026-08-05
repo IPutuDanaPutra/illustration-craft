@@ -38,12 +38,13 @@ naturally about what you want.
 
 ## Getting started
 
-1. **Point your model at this repository.** In ChatGPT, Gemini, or any assistant with
-   image-generation ability, share the link to this repo (or the raw files) and say
-   something like:
+1. **Point your model at the skill file.** Some assistants (including ChatGPT) can't
+   reliably read a regular `github.com` page, since it's JavaScript-rendered — use the
+   raw link instead:
 
-   > "Use the Illustration Craft skill in this repository to create illustrations for
-   > me."
+   > "Read the instructions at
+   > https://raw.githubusercontent.com/IPutuDanaPutra/illustration-craft/main/SKILL.md
+   > and follow them to create illustrations for me."
 
 2. **Answer the setup questions.** The model will ask about things like color
    preference, visual style (3D render, watercolor, flat design, etc.), lighting mood,
