@@ -42,25 +42,32 @@ language, no field names, no raw schema dumps. Ask one question per style dimens
 plus one about the object(s), so nothing gets silently defaulted without a chance to
 change it:
 
-1. **Color** — state the default palette in plain terms (e.g. "soft lavender, pink,
-   and warm yellow") and ask if that works or if they'd prefer something else.
-2. **Visual style** — state the default (e.g. "3D render, rounded, slightly
-   translucent") and ask if that works or if they want a different style (flat design,
-   watercolor, line art, etc. — see `param-reference.md` for options).
-3. **Lighting/mood** — state the default and ask if that works or if they want a
-   different mood (dramatic, warm, moody, bright, etc.).
-4. **Background/composition** — state the default (e.g. transparent background, soft
-   shadow) and ask if that works or if they want something else (solid color, scene
-   background, specific composition).
-5. **The object(s) to illustrate** — this is the one thing that's never defaulted
-   silently: confirm how many illustrations, and get a clear description of each one
-   (subject, pose/angle, any distinguishing details). If the user already described
-   this clearly, just restate it back for confirmation instead of re-asking.
+For each of the four style dimensions below, do not just recite the schema's stored
+default — pick a real recommendation from `param-reference.md`'s option list, suited to
+the object(s) being illustrated, and say briefly why. The schema's stored value is a
+fallback if the user has no preference and no recommendation fits better, not the thing
+to lead with.
+
+1. **Color** — recommend a palette suited to the subject (e.g. warm reds/browns for a
+   food subject, pastels for a birthday theme) and ask if that works or if they'd
+   prefer something else.
+2. **Visual style** — recommend a style from `param-reference.md` (3D render, flat
+   design, watercolor, line art, etc.) suited to the subject, and ask if that works or
+   if they want something different.
+3. **Lighting/mood** — recommend a mood from `param-reference.md` suited to the
+   subject, and ask if that works or if they want something different.
+4. **Background/composition** — recommend a background/composition from
+   `param-reference.md` suited to the subject, and ask if that works or if they want
+   something different.
+5. **The object(s) to illustrate** — this is the one thing that's never defaulted or
+   recommended away: confirm how many illustrations, and get a clear description of
+   each one (subject, pose/angle, any distinguishing details). If the user already
+   described this clearly, just restate it back for confirmation instead of re-asking.
 
 Ask all of this as one combined, easy-to-skim message — not five separate messages —
-and make clear the user can just say "use the defaults" to accept 1–4 as-is. If
-everything was already answered earlier in the conversation, skip straight to Step 3 —
-don't ask questions just to ask them.
+and make clear the user can just say "use your recommendations" to accept 1–4 as
+suggested. If everything was already answered earlier in the conversation, skip
+straight to Step 3 — don't ask questions just to ask them.
 
 **If the user asks to see the options for a specific dimension** (e.g. "give me the
 options for visual style," "what colors can I pick from"), list the real choices from
