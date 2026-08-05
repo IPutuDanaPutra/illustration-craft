@@ -83,6 +83,12 @@ translating into a valid option (e.g. user says "warm and cozy" → map to a mat
 lighting/mood value), but translate it back into plain language when talking to the
 user — never surface the reference file's internal names either.
 
+**If the user asks to see an example prompt** (e.g. "show me an example prompt,"
+"what would the prompt look like"), assemble one using the Step 4 template with the
+resolved (or currently recommended, if not yet confirmed) values and show it as plain
+text — this is fine to share since it's just the final prompt, not the schema
+structure behind it. Showing it doesn't skip Step 3's confirmation before generating.
+
 ## Step 3 — Confirm the final parameters
 
 Summarize the resolved style and object list back to the user in plain, friendly
