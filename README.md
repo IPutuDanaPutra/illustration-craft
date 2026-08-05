@@ -38,14 +38,16 @@ naturally about what you want.
 
 ## Getting started
 
-1. **Start a new chat and paste [`PASTE-THIS.md`](./PASTE-THIS.md) as your first
-   message.** This is the recommended way to use the skill — it bundles the
-   instructions and schema into one message, so the model doesn't need to fetch
-   anything from a link. Chat assistants don't reliably treat a fetched URL as binding
-   instructions (some can't fetch external links at all, and even when they can, they
-   may only skim it instead of following it step by step), so pasting the full skill
-   directly is the version that works consistently across ChatGPT, Gemini, and
-   different plans/models.
+1. **Connect this repository to your assistant, then ask for it by name.** In
+   ChatGPT, this means adding it via Settings → Connectors → GitHub; other assistants
+   may offer something similar. Once connected, just say:
+
+   > "Use the Illustration Craft skill to create illustrations of [whatever you want]."
+
+   A plain link or copy-pasted URL isn't reliable — some assistants can't fetch
+   external links at all, and even when they can, they may only skim the page instead
+   of actually following it. A real connector reads the repository directly, which is
+   what makes the flow below consistent.
 
 2. **Answer the setup questions.** The model will ask about things like color
    preference, visual style (3D render, watercolor, flat design, etc.), lighting mood,
