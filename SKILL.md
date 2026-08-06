@@ -44,9 +44,12 @@ change it:
 
 For each of the four style dimensions below, do not just recite the schema's stored
 default — pick a real recommendation from `param-reference.md`'s option list, suited to
-the object(s) being illustrated, and say briefly why. The schema's stored value is a
-fallback if the user has no preference and no recommendation fits better, not the thing
-to lead with.
+the object(s) being illustrated, and say briefly why. Phrase it so the user can picture
+it without knowing any technical terms (e.g. "a warm terracotta-and-cream palette" reads
+better than just naming a hex code with no context) — the hex code or option name still
+belongs in the message, just not as the only thing carrying the idea. The schema's
+stored value is a fallback if the user has no preference and no recommendation fits
+better, not the thing to lead with.
 
 1. **Color** — recommend a palette as hex codes suited to the subject (e.g. warm
    reds/browns for a food subject, pastels for a birthday theme) per

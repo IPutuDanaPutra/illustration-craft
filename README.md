@@ -79,6 +79,27 @@ steps below assume it's already done.
 >
 > **Model:** Got it — generating now.
 
+**Another example — an icon designer building an app icon set:**
+
+> **You:** Use https://github.com/IPutuDanaPutra/illustration-craft — I need 3D
+> isometric icons for a cloud storage app: upload, folder, and settings.
+>
+> **Model:** Here's what I'd suggest for a clean icon set:
+> - **Color:** a cool blue-and-white palette (`#2E86DE`, `#F5F7FA`) — reads as
+>   trustworthy and tech-forward
+> - **Visual style:** isometric, since you asked — crisp geometric forms at a fixed
+>   angle, ideal for a matched icon set
+> - **Lighting:** even, flat lighting with soft ambient occlusion, so no icon looks
+>   lit differently from the others
+> - **Background:** transparent, so they drop straight into your app UI
+>
+> Work for you? And to confirm the three icons: an upload icon (arrow into a cloud),
+> a folder icon, and a settings icon (gear) — all isometric, same angle?
+>
+> **You:** Use your recommendations, that object list is right.
+>
+> **Model:** Got it — generating all three now, same style and angle across the set.
+
 ## Pro tips
 
 - **Ask to see the options.** "Give me the options for visual style" (or color,
