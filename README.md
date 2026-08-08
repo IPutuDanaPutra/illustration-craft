@@ -8,6 +8,23 @@ style, confirms what you want, then produces a coherent *set* of illustrations t
 share one visual identity — same palette, same lighting, same mood — instead of a pile
 of unrelated images.
 
+## What testers are saying
+
+> "It's genuinely useful — and a little bit magic. I pointed GPT-5.6 Terra Extra High
+> at it expecting another round of prompt-wrangling, and instead got clean, consistent
+> SVG output on the first pass. Style resolved once, applied everywhere. That's the
+> part every other 'just describe it' workflow gets wrong."
+>
+> **— Product Designer, TRAVLR** (Australia)
+
+> "This is exactly the kind of workflow I've been missing. As someone juggling
+> freelance work and internship applications, having one consistent way to generate a
+> whole asset set — instead of re-prompting for every single piece — is huge. I'm
+> planning to put it through every scenario I can think of for client and internship
+> deliverables."
+>
+> **— Product Design Student, BINUS University**
+
 > **Supported platforms:** ChatGPT only, for now, via its GitHub connector. Gemini
 > can't connect to a plain GitHub repository without a Google Workspace account with
 > the GitHub Marketplace app installed, which most personal accounts don't have — so
