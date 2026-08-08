@@ -19,11 +19,11 @@ of unrelated images.
 
 > "This is exactly the kind of workflow I've been missing. As someone juggling
 > freelance work and internship applications, having one consistent way to generate a
-> whole asset set — instead of re-prompting for every single piece — is huge. I'm
-> planning to put it through every scenario I can think of for client and internship
-> deliverables."
+> whole asset set — instead of re-prompting for every single piece — is huge. Tested it
+> on ChatGPT Go and it held up. I'm planning to put it through every scenario I can
+> think of for client and internship deliverables."
 >
-> **— Product Design Student, BINUS University**
+> **— Product Design Student, BINUS University** (tested on ChatGPT Go)
 
 > **Supported platforms:** ChatGPT only, for now, via its GitHub connector. Gemini
 > can't connect to a plain GitHub repository without a Google Workspace account with
